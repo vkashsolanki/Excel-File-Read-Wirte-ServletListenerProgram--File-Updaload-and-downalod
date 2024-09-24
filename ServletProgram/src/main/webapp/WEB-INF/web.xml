@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	
+	
+
+
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>com.test.HomeServlet</servlet-class>
+	</servlet>
+	
+		<servlet>
+		<servlet-name>HomeForward</servlet-name>
+		<servlet-class>com.test.HomeForward</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/HomeServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>HomeForward</servlet-name>
+		<!-- pass here actions parts which pass in html page in action attribute -->
+		<url-pattern>/HomeForward</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+	
+	<welcome-file>home.html</welcome-file>
+	
+	
+	
+	</welcome-file-list>
+</web-app>
